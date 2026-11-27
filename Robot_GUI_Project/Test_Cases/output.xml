@@ -1,178 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T00:20:58.169908" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T00:36:49.925424" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="C:\Python_Project_Sreeramya\Robot_GUI_Project\Test_Cases\login.robot">
 <test id="s1-t1" name="Verfy Login Functionality" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:20:59.002990" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com//'.</msg>
+<msg time="2026-11-28T00:36:50.718416" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-28T00:20:59.002207" elapsed="4.279459"/>
+<status status="PASS" start="2026-11-28T00:36:50.718416" elapsed="3.340684"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-28T00:21:03.281689" elapsed="0.116258"/>
+<status status="PASS" start="2026-11-28T00:36:54.060100" elapsed="0.028002"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:21:13.400465" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-11-28T00:37:04.089742" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:21:03.399949" elapsed="10.000516"/>
+<status status="PASS" start="2026-11-28T00:36:54.089114" elapsed="10.000628"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:21:13.400465" level="INFO">Typing text 'Laptop' into text field 'id=ti6dpd'.</msg>
-<arg>id=ti6dpd</arg>
+<msg time="2026-11-28T00:37:04.091721" level="INFO">Typing text 'Laptop' into text field 'id=twotabsearchtextbox'.</msg>
+<arg>id=twotabsearchtextbox</arg>
 <arg>Laptop</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:21:13.400465" elapsed="0.107033"/>
+<status status="PASS" start="2026-11-28T00:37:04.090706" elapsed="0.161987"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:21:43.509278" level="INFO">Slept 30 seconds.</msg>
-<arg>30s</arg>
+<msg time="2026-11-28T00:37:14.253848" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:21:13.507498" elapsed="30.001780"/>
+<status status="PASS" start="2026-11-28T00:37:04.253696" elapsed="10.000152"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:21:43.510267" level="INFO">Clicking button 'id=ti6dpd'.</msg>
-<msg time="2026-11-28T00:21:43.667746" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	(No symbol) [0x7ff632440f05]
-	(No symbol) [0x7ff632341db0]
-	(No symbol) [0x7ff63271a211]
-	(No symbol) [0x7ff6321dbc93]
-	(No symbol) [0x7ff6321ecda2]
-	(No symbol) [0x7ff63271d7b3]
-	(No symbol) [0x7ff6321eb8fc]
-	(No symbol) [0x7ff6321add6b]
-	(No symbol) [0x7ff6321adf42]
-	(No symbol) [0x7ff6321ae165]
-	(No symbol) [0x7ff6328e0f4f]
-	(No symbol) [0x7ff632907678]
-	(No symbol) [0x7ff6328faf68]
-	(No symbol) [0x7ff63255e62e]
-	(No symbol) [0x7ff6323516f3]
-	(No symbol) [0x7ff6329b5073]
-	(No symbol) [0x7ff6321acdc4]
-	(No symbol) [0x7ff6329616df]
-	(No symbol) [0x7ff98aa74cb0]
-	(No symbol) [0x7ff98c2dedcb]
-</msg>
-<msg time="2026-11-28T00:21:43.667746" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=158.0.8127.37); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	(No symbol) [0x7ff632440f05]
-	(No symbol) [0x7ff632341db0]
-	(No symbol) [0x7ff6321c3433]
-	(No symbol) [0x7ff6321b7d7f]
-	(No symbol) [0x7ff6321c9a4d]
-	(No symbol) [0x7ff6321f1546]
-	(No symbol) [0x7ff6321f583f]
-	(No symbol) [0x7ff6321dbea1]
-	(No symbol) [0x7ff6321dd1d3]
-	(No symbol) [0x7ff6328e0f4f]
-	(No symbol) [0x7ff632907678]
-	(No symbol) [0x7ff6328faf68]
-	(No symbol) [0x7ff63255e62e]
-	(No symbol) [0x7ff6323516f3]
-	(No symbol) [0x7ff63234c304]
-	(No symbol) [0x7ff63234c494]
-	(No symbol) [0x7ff63233509c]
-	(No symbol) [0x7ff98aa74cb0]
-	(No symbol) [0x7ff98c2dedcb]
-</msg>
-<arg>id=ti6dpd</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2026-11-28T00:21:43.509278" elapsed="0.158468">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=158.0.8127.37); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	(No symbol) [0x7ff632440f05]
-	(No symbol) [0x7ff632341db0]
-	(No symbol) [0x7ff6321c3433]
-	(No symbol) [0x7ff6321b7d7f]
-	(No symbol) [0x7ff6321c9a4d]
-	(No symbol) [0x7ff6321f1546]
-	(No symbol) [0x7ff6321f583f]
-	(No symbol) [0x7ff6321dbea1]
-	(No symbol) [0x7ff6321dd1d3]
-	(No symbol) [0x7ff6328e0f4f]
-	(No symbol) [0x7ff632907678]
-	(No symbol) [0x7ff6328faf68]
-	(No symbol) [0x7ff63255e62e]
-	(No symbol) [0x7ff6323516f3]
-	(No symbol) [0x7ff63234c304]
-	(No symbol) [0x7ff63234c494]
-	(No symbol) [0x7ff63233509c]
-	(No symbol) [0x7ff98aa74cb0]
-	(No symbol) [0x7ff98c2dedcb]
-</status>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-28T00:37:14.254843" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
+<arg>id=nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-28T00:37:14.254843" elapsed="3.210456"/>
 </kw>
-<status status="FAIL" start="2026-11-28T00:20:58.998900" elapsed="44.668846">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=158.0.8127.37); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	(No symbol) [0x7ff632440f05]
-	(No symbol) [0x7ff632341db0]
-	(No symbol) [0x7ff6321c3433]
-	(No symbol) [0x7ff6321b7d7f]
-	(No symbol) [0x7ff6321c9a4d]
-	(No symbol) [0x7ff6321f1546]
-	(No symbol) [0x7ff6321f583f]
-	(No symbol) [0x7ff6321dbea1]
-	(No symbol) [0x7ff6321dd1d3]
-	(No symbol) [0x7ff6328e0f4f]
-	(No symbol) [0x7ff632907678]
-	(No symbol) [0x7ff6328faf68]
-	(No symbol) [0x7ff63255e62e]
-	(No symbol) [0x7ff6323516f3]
-	(No symbol) [0x7ff63234c304]
-	(No symbol) [0x7ff63234c494]
-	(No symbol) [0x7ff63233509c]
-	(No symbol) [0x7ff98aa74cb0]
-	(No symbol) [0x7ff98c2dedcb]
-</status>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>id=nav-search-submit-button</arg>
+<arg>ENTER</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-28T00:37:17.466299" elapsed="0.408776"/>
+</kw>
+<status status="PASS" start="2026-11-28T00:36:50.718416" elapsed="27.157661"/>
 </test>
-<status status="FAIL" start="2026-11-28T00:20:58.179904" elapsed="45.496844"/>
+<status status="PASS" start="2026-11-28T00:36:49.925424" elapsed="27.951656"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login" id="s1" pass="0" fail="1" skip="0">Login</stat>
+<stat name="Login" id="s1" pass="1" fail="0" skip="0">Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-11-28T00:21:43.667746" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
-Stacktrace:
-Symbols not available. Dumping unresolved backtrace:
-	(No symbol) [0x7ff632440f05]
-	(No symbol) [0x7ff632341db0]
-	(No symbol) [0x7ff63271a211]
-	(No symbol) [0x7ff6321dbc93]
-	(No symbol) [0x7ff6321ecda2]
-	(No symbol) [0x7ff63271d7b3]
-	(No symbol) [0x7ff6321eb8fc]
-	(No symbol) [0x7ff6321add6b]
-	(No symbol) [0x7ff6321adf42]
-	(No symbol) [0x7ff6321ae165]
-	(No symbol) [0x7ff6328e0f4f]
-	(No symbol) [0x7ff632907678]
-	(No symbol) [0x7ff6328faf68]
-	(No symbol) [0x7ff63255e62e]
-	(No symbol) [0x7ff6323516f3]
-	(No symbol) [0x7ff6329b5073]
-	(No symbol) [0x7ff6321acdc4]
-	(No symbol) [0x7ff6329616df]
-	(No symbol) [0x7ff98aa74cb0]
-	(No symbol) [0x7ff98c2dedcb]
-</msg>
 </errors>
 </robot>
