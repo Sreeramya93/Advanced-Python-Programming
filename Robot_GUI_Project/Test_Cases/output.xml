@@ -1,52 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T00:36:49.925424" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T18:51:01.587659" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="C:\Python_Project_Sreeramya\Robot_GUI_Project\Test_Cases\login.robot">
 <test id="s1-t1" name="Verfy Login Functionality" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:36:50.718416" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<msg time="2026-11-28T18:51:02.173855" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
 <arg>${URL}</arg>
 <arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-28T00:36:50.718416" elapsed="3.340684"/>
+<status status="PASS" start="2026-11-28T18:51:02.173855" elapsed="2.798384"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-28T00:36:54.060100" elapsed="0.028002"/>
+<status status="PASS" start="2026-11-28T18:51:04.972239" elapsed="0.025001"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:37:04.089742" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-11-28T18:51:14.999101" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:36:54.089114" elapsed="10.000628"/>
+<status status="PASS" start="2026-11-28T18:51:04.998241" elapsed="10.000860"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:37:04.091721" level="INFO">Typing text 'Laptop' into text field 'id=twotabsearchtextbox'.</msg>
+<msg time="2026-11-28T18:51:15.000099" level="INFO">Typing text 'Laptop' into text field 'id=twotabsearchtextbox'.</msg>
 <arg>id=twotabsearchtextbox</arg>
 <arg>Laptop</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:37:04.090706" elapsed="0.161987"/>
+<status status="PASS" start="2026-11-28T18:51:14.999101" elapsed="0.137453"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:37:14.253848" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-11-28T18:51:25.137841" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:37:04.253696" elapsed="10.000152"/>
+<status status="PASS" start="2026-11-28T18:51:15.137552" elapsed="10.000289"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:37:14.254843" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
+<msg time="2026-11-28T18:51:25.138109" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
 <arg>id=nav-search-submit-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:37:14.254843" elapsed="3.210456"/>
+<status status="PASS" start="2026-11-28T18:51:25.138109" elapsed="2.672126"/>
 </kw>
-<kw name="Press Key" owner="SeleniumLibrary">
-<arg>id=nav-search-submit-button</arg>
-<arg>ENTER</arg>
-<doc>Simulates user pressing key on element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:37:17.466299" elapsed="0.408776"/>
-</kw>
-<status status="PASS" start="2026-11-28T00:36:50.718416" elapsed="27.157661"/>
+<status status="PASS" start="2026-11-28T18:51:02.173855" elapsed="25.636380"/>
 </test>
-<status status="PASS" start="2026-11-28T00:36:49.925424" elapsed="27.951656"/>
+<status status="PASS" start="2026-11-28T18:51:01.587659" elapsed="26.223577"/>
 </suite>
 <statistics>
 <total>

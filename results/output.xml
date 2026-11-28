@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T19:02:43.186139" rpa="false" schemaversion="5">
+<suite id="s1" name="Python Project Sreeramya" source="c:\Python_Project_Sreeramya">
+<suite id="s1-s1" name="Robot API" source="c:\Python_Project_Sreeramya\Robot_API">
+<suite id="s1-s1-s1" name="Tests" source="c:\Python_Project_Sreeramya\Robot_API\tests">
+<suite id="s1-s1-s1-s1" name="Test 2" source="c:\Python_Project_Sreeramya\Robot_API\tests\test_2.robot">
+<kw name="Create API Session" owner="equipment_keyword1" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-11-28T19:02:43.488962" level="INFO">Creating Session using : alias=Equipment_API, url=http://127.0.0.1:5015, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Equipment_API</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-11-28T19:02:43.487953" elapsed="0.002000"/>
+</kw>
+<status status="PASS" start="2026-11-28T19:02:43.487559" elapsed="0.002394"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="TC1_GETALL" line="8">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test1 Started</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.509064" elapsed="0.001370"/>
+</kw>
+<kw name="Get All Equipment" owner="equipment_keyword1">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-11-28T19:02:43.519060" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment 
+ path_url=/api/equipment 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-11-28T19:02:43.519060" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Sat, 28 Nov 2026 06:02:43 GMT', 'Content-Type': 'application/json', 'Content-Length': '151', 'Connection': 'close'} 
+ body=[{"id":101,"name":"Flight control unit","status":"Operational","type":"FCU"},{"id":102,"name":"Navigation System","status":"Operational","type":"NS"}]
+ 
+ </msg>
+<msg time="2026-11-28T19:02:43.520059" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>Equipment_API</arg>
+<arg>/api/equipment</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.512098" elapsed="0.007961"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-11-28T19:02:43.520059" elapsed="0.000000"/>
+</return>
+<msg time="2026-11-28T19:02:43.521060" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2026-11-28T19:02:43.511059" elapsed="0.010001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.522060" level="INFO">${data} = [{'id': 101, 'name': 'Flight control unit', 'status': 'Operational', 'type': 'FCU'}, {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}]</msg>
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.521060" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.525063" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.524156" elapsed="0.000907"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.527060" level="INFO">Length is 2.</msg>
+<arg>${data}</arg>
+<arg>2</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.526060" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2026-11-28T19:02:43.489953" elapsed="0.038107"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="TC2_GETBYID" line="14">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Test1 Started</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.550064" elapsed="0.000997"/>
+</kw>
+<kw name="Get Equipment by id" owner="equipment_keyword1">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-11-28T19:02:43.556063" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment/102 
+ path_url=/api/equipment/102 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-11-28T19:02:43.556063" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment/102 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Sat, 28 Nov 2026 06:02:43 GMT', 'Content-Type': 'application/json', 'Content-Length': '73', 'Connection': 'close'} 
+ body={"id":102,"name":"Navigation System","status":"Operational","type":"NS"}
+ 
+ </msg>
+<msg time="2026-11-28T19:02:43.556063" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>Equipment_API</arg>
+<arg>/api/equipment/${equipment_id}</arg>
+<arg>expected_status=${expected_status}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.552062" elapsed="0.004001"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-11-28T19:02:43.557061" elapsed="0.000000"/>
+</return>
+<msg time="2026-11-28T19:02:43.557061" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>102</arg>
+<arg>200</arg>
+<status status="PASS" start="2026-11-28T19:02:43.551061" elapsed="0.006000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.559060" level="INFO">${data} = {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}</msg>
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.558060" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.560060" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.560060" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-28T19:02:43.561060" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${data}[id]</arg>
+<arg>102</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-28T19:02:43.561060" elapsed="0.001004"/>
+</kw>
+<status status="PASS" start="2026-11-28T19:02:43.545059" elapsed="0.017005"/>
+</test>
+<status status="PASS" start="2026-11-28T19:02:43.298450" elapsed="0.277611"/>
+</suite>
+<status status="PASS" start="2026-11-28T19:02:43.292449" elapsed="0.295681"/>
+</suite>
+<status status="PASS" start="2026-11-28T19:02:43.286390" elapsed="0.317737"/>
+</suite>
+<status status="PASS" start="2026-11-28T19:02:43.221142" elapsed="0.388987"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Python Project Sreeramya" id="s1" pass="2" fail="0" skip="0">Python Project Sreeramya</stat>
+<stat name="Robot API" id="s1-s1" pass="2" fail="0" skip="0">Python Project Sreeramya.Robot API</stat>
+<stat name="Tests" id="s1-s1-s1" pass="2" fail="0" skip="0">Python Project Sreeramya.Robot API.Tests</stat>
+<stat name="Test 2" id="s1-s1-s1-s1" pass="2" fail="0" skip="0">Python Project Sreeramya.Robot API.Tests.Test 2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

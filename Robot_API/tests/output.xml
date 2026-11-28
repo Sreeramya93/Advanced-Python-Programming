@@ -1,141 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-27T22:43:28.807012" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T19:22:17.603934" rpa="false" schemaversion="5">
 <suite id="s1" name="Test 2" source="C:\Python_Project_Sreeramya\Robot_API\tests\test_2.robot">
 <kw name="Create API Session" owner="equipment_keyword1" type="SETUP">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-11-27T22:43:29.039172" level="INFO">Creating Session using : alias=Equipment_API, url=http://127.0.0.1:5015, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-11-28T19:22:17.833516" level="INFO">Creating Session using : alias=Equipment_API, url=http://127.0.0.1:5015, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>Equipment_API</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.833516" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.833516" elapsed="0.000000"/>
 </kw>
 <test id="s1-t1" name="TC1_GETALL" line="8">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Test1 Started</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.833516" elapsed="0.010000"/>
 </kw>
 <kw name="Get All Equipment" owner="equipment_keyword1">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-11-27T22:43:29.049157" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment 
+<msg time="2026-11-28T19:22:17.843516" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment 
  path_url=/api/equipment 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-11-27T22:43:29.049157" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment 
+<msg time="2026-11-28T19:22:17.843516" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Fri, 27 Nov 2026 09:43:29 GMT', 'Content-Type': 'application/json', 'Content-Length': '151', 'Connection': 'close'} 
+ headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Sat, 28 Nov 2026 06:22:17 GMT', 'Content-Type': 'application/json', 'Content-Length': '151', 'Connection': 'close'} 
  body=[{"id":101,"name":"Flight control unit","status":"Operational","type":"FCU"},{"id":102,"name":"Navigation System","status":"Operational","type":"NS"}]
  
  </msg>
-<msg time="2026-11-27T22:43:29.049157" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-11-28T19:22:17.843516" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>Equipment_API</arg>
 <arg>/api/equipment</arg>
 <arg>expected_status=200</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.009985"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2026-11-27T22:43:29.049157" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </return>
-<msg time="2026-11-27T22:43:29.049157" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-11-28T19:22:17.843516" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.009985"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.053155" level="INFO">${data} = [{'id': 101, 'name': 'Flight control unit', 'status': 'Operational', 'type': 'FCU'}, {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}]</msg>
+<msg time="2026-11-28T19:22:17.843516" level="INFO">${data} = [{'id': 101, 'name': 'Flight control unit', 'status': 'Operational', 'type': 'FCU'}, {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}]</msg>
 <var>${data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variable.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.052154" elapsed="0.001001"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.054155" level="INFO">Argument types are:
+<msg time="2026-11-28T19:22:17.843516" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.053155" elapsed="0.001000"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </kw>
 <kw name="Length Should Be" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.055154" level="INFO">Length is 2.</msg>
+<msg time="2026-11-28T19:22:17.843516" level="INFO">Length is 2.</msg>
 <arg>${data}</arg>
 <arg>2</arg>
 <doc>Verifies that the length of the given item is correct.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.054155" elapsed="0.000999"/>
+<status status="PASS" start="2026-11-28T19:22:17.843516" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-11-27T22:43:29.039172" elapsed="0.015982"/>
+<status status="PASS" start="2026-11-28T19:22:17.833516" elapsed="0.020000"/>
 </test>
 <test id="s1-t2" name="TC2_GETBYID" line="14">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Test1 Started</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.056155" elapsed="0.001012"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.000000"/>
 </kw>
 <kw name="Get Equipment by id" owner="equipment_keyword1">
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-11-27T22:43:29.061154" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment/102 
+<msg time="2026-11-28T19:22:17.853516" level="INFO">GET Request : url=http://127.0.0.1:5015/api/equipment/102 
  path_url=/api/equipment/102 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-11-27T22:43:29.061154" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment/102 
+<msg time="2026-11-28T19:22:17.853516" level="INFO">GET Response : url=http://127.0.0.1:5015/api/equipment/102 
  status=200, reason=OK 
- headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Fri, 27 Nov 2026 09:43:29 GMT', 'Content-Type': 'application/json', 'Content-Length': '73', 'Connection': 'close'} 
+ headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Sat, 28 Nov 2026 06:22:17 GMT', 'Content-Type': 'application/json', 'Content-Length': '73', 'Connection': 'close'} 
  body={"id":102,"name":"Navigation System","status":"Operational","type":"NS"}
  
  </msg>
-<msg time="2026-11-27T22:43:29.061154" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-11-28T19:22:17.853516" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>Equipment_API</arg>
 <arg>/api/equipment/${equipment_id}</arg>
 <arg>expected_status=${expected_status}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.057167" elapsed="0.003987"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2026-11-27T22:43:29.061154" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.000000"/>
 </return>
-<msg time="2026-11-27T22:43:29.062160" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-11-28T19:22:17.853516" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>102</arg>
 <arg>200</arg>
-<status status="PASS" start="2026-11-27T22:43:29.057167" elapsed="0.004993"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.063620" level="INFO">${data} = {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}</msg>
+<msg time="2026-11-28T19:22:17.860275" level="INFO">${data} = {'id': 102, 'name': 'Navigation System', 'status': 'Operational', 'type': 'NS'}</msg>
 <var>${data}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variable.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.063620" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.006759"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.065128" level="INFO">Argument types are:
+<msg time="2026-11-28T19:22:17.861285" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.063620" elapsed="0.001508"/>
+<status status="PASS" start="2026-11-28T19:22:17.860275" elapsed="0.001010"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2026-11-27T22:43:29.065557" level="INFO">Argument types are:
+<msg time="2026-11-28T19:22:17.861285" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${data}[id]</arg>
 <arg>102</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-11-27T22:43:29.065557" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-28T19:22:17.861285" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2026-11-27T22:43:29.056155" elapsed="0.009402"/>
+<status status="PASS" start="2026-11-28T19:22:17.853516" elapsed="0.009456"/>
 </test>
-<status status="PASS" start="2026-11-27T22:43:28.807012" elapsed="0.259550"/>
+<status status="PASS" start="2026-11-28T19:22:17.603934" elapsed="0.259354"/>
 </suite>
 <statistics>
 <total>
